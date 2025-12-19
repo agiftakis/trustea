@@ -1,24 +1,51 @@
-*.log
-.DS_Store
+# Environment files
 .env
 .env.backup
 .env.production
-.phpactor.json
-.phpunit.result.cache
-/.fleet
-/.idea
-/.nova
-/.phpunit.cache
-/.vscode
-/.zed
-/auth.json
-/node_modules
-/public/build
-/public/hot
-/public/storage
+.env.*.local  # Covers any local overrides
+
+# Laravel specific
 /storage/*.key
 /storage/pail
+/public/storage
+/public/hot
+/public/build
+/storage/app/public/*   # If you store uploaded files here
+/storage/framework/cache/data/*
+/storage/framework/sessions/*
+/storage/framework/views/*.php
+/storage/logs/*.log
+/bootstrap/cache/*.php
+
+# Composer & PHP tools
 /vendor
+/auth.json
+.phpactor.json
+.phpunit.result.cache
+/.phpunit.cache
+
+# Node / JS
+/node_modules
+npm-debug.log
+yarn-error.log
+yarn-debug.log
+.pnpm-debug.log
+
+# IDE / Editors
+.DS_Store
+.idea
+.vscode
+.nova
+.zed
+.fleet
+Thumbs.db
+
+# Testing & Coverage
+/coverage
+/phpunit.xml
+phpunit.xml  # In case it's in root
+
+# Other
+*.log
 Homestead.json
 Homestead.yaml
-Thumbs.db
